@@ -67,7 +67,7 @@
 需要在环境变量中添加如下配置：
 
 ```sh
-export TAMMYNOVEL_CONFIG_CENTER_NOTIFY_ZOOKEEPER_HOST=localhost:2181
+export DOCKER_CONFIG_CENTER_NOTIFY_ZOOKEEPER_HOST=localhost:2181
 
-export TAMMYNOVEL_CONFIG_CENTER_URL=http://localhost:8080
+export DOCKER_CONFIG_CENTER_URL=http://localhost:8080
 ```
