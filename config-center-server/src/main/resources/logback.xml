@@ -18,9 +18,9 @@
         </discriminator>
         <sift>
             <appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
-                <file>${log.base}/tammynovel-config-center/config_center.log</file>
+                <file>${log.base}/config-center/config_center.log</file>
                 <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
-                    <fileNamePattern>${log.base}/tammynovel-config-center/config_center.log.%d{yyyy-MM-dd}</fileNamePattern>
+                    <fileNamePattern>${log.base}/config-center/config_center.log.%d{yyyy-MM-dd}</fileNamePattern>
                 </rollingPolicy>
                 <append>true</append>
                 <layout class="ch.qos.logback.classic.PatternLayout">
