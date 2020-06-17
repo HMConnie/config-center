@@ -14,6 +14,11 @@
  Date: 17/06/2020 15:22:26
 */
 
+CREATE DATABASE IF NOT EXISTS config_center DEFAULT CHARACTER SET = utf8mb4;
+
+Use config_center;
+
+
 SET NAMES utf8mb4;
 SET FOREIGN_KEY_CHECKS = 0;
 
