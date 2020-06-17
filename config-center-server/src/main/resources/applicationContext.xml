@@ -23,11 +23,11 @@ xmlns:tx="http://www.springframework.org/schema/tx" xsi:schemaLocation="
 	<bean id="propertyConfigurer"  class="com.sgcai.config.center.CustomPlaceholderConfigurer"></bean>
 	
 	<bean id="zookeeperNotifier" class="com.sgcai.config.center.notify.ZookeeperNotifier" init-method="init" destroy-method="destory">
-		<property name="zookeeperHost" value="${TAMMYNOVEL_CONFIG_CENTER_NOTIFY_ZOOKEEPER_HOST}"/>
+		<property name="zookeeperHost" value="${CONFIG_CENTER_NOTIFY_ZOOKEEPER_HOST}"/>
 	</bean>
 	
 	<!-- scan package -->
-	<context:component-scan base-package="com.tammynovel.config.center" />
+	<context:component-scan base-package="com.sgcai.config.center" />
 	
 	<!-- 注解 -->
 	<mvc:annotation-driven >

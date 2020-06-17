@@ -12,9 +12,9 @@
 
 	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
 	    <property name="driverClassName" value="com.mysql.jdbc.Driver"/>
-	    <property name="url" value="jdbc:mysql://${TAMMYNOVEL_CONFIG_CENTER_DB_HOST}/${TAMMYNOVEL_CONFIG_CENTER_DB_NAME}?useUnicode=false&amp;autoReconnect=true&amp;characterEncoding=utf-8" />
-	    <property name="username" value="${TAMMYNOVEL_CONFIG_CENTER_DB_USERNAME}" />
-	    <property name="password" value="${TAMMYNOVEL_CONFIG_CENTER_DB_PASSWORD}" />
+	    <property name="url" value="jdbc:mysql://${CONFIG_CENTER_DB_HOST}/${CONFIG_CENTER_DB_NAME}?useUnicode=false&amp;autoReconnect=true&amp;characterEncoding=utf-8" />
+	    <property name="username" value="${CONFIG_CENTER_DB_USERNAME}" />
+	    <property name="password" value="${CONFIG_CENTER_DB_PASSWORD}" />
 	    <property name="maxActive" value="30" />
 	    <property name="initialSize" value="1" />
 	    <property name="maxWait" value="60000" />
@@ -38,12 +38,12 @@
 	
 	<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">  
 	    <property name="dataSource" ref="dataSource" /> 
-	    <property name="typeAliasesPackage" value="com.tammynovel.config.center.entity" />
+	    <property name="typeAliasesPackage" value="com.sgcai.config.center.entity" />
 	</bean>
 	
 	
 	<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">  
-	    <property name="basePackage" value="com.tammynovel.config.center.dao" />
+	    <property name="basePackage" value="com.sgcai.config.center.dao" />
 	</bean> 
 
 </beans>
