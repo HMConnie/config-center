@@ -4,10 +4,10 @@
     <parent>
         <groupId>com.sgcai</groupId>
         <artifactId>config-center-parent</artifactId>
-        <version>0.0.1-SNAPSHOT</version>
+        <version>0.0.10-SNAPSHOT</version>
     </parent>
     <artifactId>config-center-common</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>0.0.10-SNAPSHOT</version>
     <properties>
         <maven_compiler_plugin_version>2.3.2</maven_compiler_plugin_version>
         <java_source_version>1.7</java_source_version>
