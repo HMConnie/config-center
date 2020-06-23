@@ -51,7 +51,7 @@
 </bean>
 
 
-<bean id="propertyConfigurer" class="com.sgcai.config.center.client.properties.spring.AutoReloadPropertySourcesPlaceholderConfigurer" init-method="init" destroy-method="destory">
+<bean id="propertyConfigurer" class="AutoReloadPropertySourcesPlaceholderConfigurer" init-method="init" destroy-method="destory">
 	<property name="application" value="config-center-test"/>
 	<property name="propertiesName" value="dui1dui-cashier"/>
 	<property name="locations">

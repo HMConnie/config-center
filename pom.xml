@@ -1,15 +1,15 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>com.sgcai</groupId>
-	<artifactId>config-center-parent</artifactId>
+	<groupId>cn.connie</groupId>
+	<artifactId>cn-config-center-parent</artifactId>
 	<version>0.0.10-SNAPSHOT</version>
 	<packaging>pom</packaging>
 	<modules>
-		<module>config-center-server</module>
-		<module>config-center-client</module>
-		<module>config-center-common</module>
-		<module>config-center-test</module>
+		<module>cn-config-center-server</module>
+		<module>cn-config-center-client</module>
+		<module>cn-config-center-common</module>
+		<module>cn-config-center-test</module>
 	</modules>
 
 	<properties>
@@ -119,14 +119,4 @@
 		</pluginManagement>
 	</build>
 
-	<distributionManagement>
-		<repository>
-			<id>releases</id>
-			<url>http://172.16.10.203:8081/nexus/content/repositories/releases</url>
-		</repository>
-		<snapshotRepository>
-			<id>snapshots</id>
-			<url>http://172.16.10.203:8081/nexus/content/repositories/snapshots</url>
-		</snapshotRepository>
-	</distributionManagement>
 </project>

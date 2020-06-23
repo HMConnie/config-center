@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="cn.connie.config.center.dao.WhiteListDAO">
+
+	<resultMap id="WhiteListResult" type="cn.connie.config.center.entity.WhiteList">
+		<result column="id" property="id" />
+		<result column="ip" property="ip" />
+		<result column="description" property="description"/>
+		<result column="create_time" property="createTime" />
+		<result column="last_update_time" property="lastUpdateTime" />
+	</resultMap>
+
+
+	<sql id="Base_Column_List">
+		select 
+			id, ip, description, create_time, last_update_time
+		from 
+			t_white_list
+	</sql>
+
+	<select id="selectOne" resultMap="WhiteListResult" parameterType="java.lang.String">
+		<include refid="Base_Column_List" />
+		<where>
+			id = #{id}
+		</where>
+	</select>
+	
+	<select id="selectByIp" resultMap="WhiteListResult" parameterType="java.lang.String">
+		<include refid="Base_Column_List" />
+		<where>
+			ip = #{ip}
+		</where>
+	</select>
+	
+	
+	<select id="selectList" resultMap="WhiteListResult" parameterType="java.lang.String">
+		<include refid="Base_Column_List" />
+		order by create_time desc
+	</select>
+
+	<insert id="insert" parameterType="cn.connie.config.center.entity.Module">
+		insert into t_white_list (
+			id, ip, description, create_time, last_update_time
+		)
+		values (
+			#{id}, #{ip}, #{description}, now(), now()
+		)
+	</insert>
+	
+	<delete id="delete" parameterType="java.lang.String">
+		delete from t_white_list where id = #{id}
+	</delete>
+</mapper>
