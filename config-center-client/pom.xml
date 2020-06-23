@@ -24,7 +24,7 @@
         <dependency>
             <groupId>com.sgcai</groupId>
             <artifactId>config-center-common</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
+            <version>0.0.10-SNAPSHOT</version>
         </dependency>
     </dependencies>
 </project>
